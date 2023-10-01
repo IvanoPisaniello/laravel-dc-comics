@@ -15,12 +15,7 @@
    
     @include ('partials.header')
     @include ('partials.hero')
-    {{-- @include('partials.cards') --}}
-    @if(isset($comic)) <!-- Verifica se è stata passata la variabile $comic -->
-    @include('partials.show') <!-- Includi la vista "show.blade.php" se $comic è definito -->
-@else
-    @include('partials.cards') <!-- Altrimenti, includi il partial "cards" come di default -->
-@endif
+    @include('partials.cards')
     @include('partials.lower_menu')
     @include('partials.footer')
 
