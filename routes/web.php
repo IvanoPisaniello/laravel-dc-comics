@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", [ComicController::class, "index"]);
+Route::get("/{comic}", [ComicController::class, "show"])->name("partials.show");

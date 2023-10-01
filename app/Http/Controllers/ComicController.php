@@ -13,4 +13,10 @@ class ComicController extends Controller
 
         return view('layouts.public', ['comics' => $comics]);
     }
+
+    public function show($id)
+    {
+        $comic = Comic::find($id);
+        return view('partials.show', ["comic" => $comic]);
+    }
 }

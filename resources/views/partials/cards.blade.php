@@ -8,7 +8,8 @@
         @foreach ($comics as $comic)
         <div class="col-md-2">
             <div class="card bg-transparent">
-                <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
+                <a href="{{route ('partials.show', $comic->id)}}"><img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}"></a>
+                
                 <div class="card-body text-white">
                     <h5 class="card-title">{{ $comic->title }}</h5>
                 
