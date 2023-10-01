@@ -1,0 +1,38 @@
+.list-container {
+    height: 500px;
+    background-image: url(../../../public/images/footer-bg.jpg);
+    position: relative;
+
+
+
+    .bg-logo {
+        position: absolute;
+        right: 50px;
+        bottom: -60px;
+        height: 600px;
+        width: 600px;
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: .8rem;
+        color: grey;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+
+
+}
+
+.footer-nav {
+    height: 100px;
+    background-color: black;
+    position: relative;
+    z-index: 2;
+
+
+}
