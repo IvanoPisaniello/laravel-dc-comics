@@ -16,7 +16,9 @@
     @include ('partials.header')
     @include ('partials.hero')
     <div class="show-container">
-        <div class="blue-bar bg-primary"></div>
+        <div class="blue-bar bg-primary p-2">
+            <a class="btn btn-success rounded-2" href="{{ route('comics.index') }}">Torna a Tutti i Comics</a>
+        </div>
         <div class="container">
             
          <img src="{{$comic->thumb}}" alt="" class="img-show">
