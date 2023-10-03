@@ -11,7 +11,7 @@ class comic extends Model
 
 
     // protected $casts = [
-    //     'artists' => 'array',
+    //     // 'artists' => 'array',
     //     "writers" => "array"
     // ];
 

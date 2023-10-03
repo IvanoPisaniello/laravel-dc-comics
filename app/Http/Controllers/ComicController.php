@@ -7,6 +7,34 @@ use App\Models\comic;
 
 class ComicController extends Controller
 {
+
+    public function edit($id)
+    {
+        $comics = Comic::FindOrFail($id);
+        return view("comics.edit", ["comics" => $comics]);
+    }
+
+    public function update(request $request, $id)
+    {
+        $comics = Comic::FindOrFail($id);
+        $data = $request->validate([
+            "title" => "required",
+            "description" => "nullable|string",
+            "thumb" => "nullable|string|max:500",
+            "price" => "required|integer|min:1|max:10000",
+            "series" => "nullable|string|max:255",
+            "sales_date" => "nullable",
+            "type" => "nullable",
+            "artists" => "nullable",
+            "writers" => "nullable"
+
+        ]);
+
+        $comics->update($data);
+        return redirect()->route('comics.show', $comics->id);
+    }
+
+
     public function create()
     {
         return view("comics.create");

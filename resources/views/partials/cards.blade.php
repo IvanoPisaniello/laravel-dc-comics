@@ -12,7 +12,10 @@
                 
                 <div class="card-body text-white">
                     <h5 class="card-title">{{ $comic->title }}</h5>
-                
+                    <div class="d-flex justify-content-center pb-3">
+       
+                        <a class="btn btn-primary px-4 py-0 rounded-0" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                      </div>
                 </div>
             </div>
         </div>
