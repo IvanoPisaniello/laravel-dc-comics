@@ -20,7 +20,7 @@
             <a class="btn btn-success rounded-2" href="{{ route('comics.index') }}">Torna a Tutti i Comics</a>
         </div>
         <div class="container">
-            
+            @dump($comic->writers)
          <img src="{{$comic->thumb}}" alt="" class="img-show">
          <div class="info-container">
             <h3 class="mt-5">{{$comic->title}}</h3>
