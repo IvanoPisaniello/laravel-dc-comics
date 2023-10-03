@@ -20,7 +20,7 @@
     </div>
     <div class="d-flex justify-content-center pb-3">
        
-        <a class="btn btn-primary px-4 py-0 rounded-0" href="{{ route('comics.create') }}">LOAD MORE</a>
+        <a class="btn btn-primary px-4 py-0 rounded-0" href="{{ route('comics.create') }}">Aggiungi Nuovo</a>
       </div>
       
 </div>
