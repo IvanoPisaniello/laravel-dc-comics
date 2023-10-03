@@ -7,11 +7,11 @@
     <div class="row pt-4">
         @foreach ($comics as $comic)
         <div class="col-md-2">
-            <div class="card bg-transparent">
+            <div class="my-card bg-transparent">
                 <a href="{{route ('comics.show', $comic->id)}}"><img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}"></a>
                 
                 <div class="card-body text-white d-flex flex-column">
-                    <h5 class="card-title">{{ $comic->title }}</h5>
+                    <h5 class="my-card-title">{{ $comic->title }}</h5>
                     <div class="d-flex justify-content-center gap-2 pb-3" >
        
                         <a class="btn btn-success rounded-2" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>

@@ -18,6 +18,7 @@
     <div class="show-container">
         <div class="blue-bar bg-primary p-2 d-flex justify-content-between">
             <a class="btn btn-success rounded-2" href="{{ route('comics.index') }}">Torna a Tutti i Comics</a>
+            <a class="btn btn-success rounded-2" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
             <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="d-inline-block">
                 @csrf
                 @method("DELETE")
