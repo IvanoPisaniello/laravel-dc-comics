@@ -36,7 +36,7 @@ class ComicController extends Controller
             "sales_date" => "nullable",
             "type" => "nullable",
             "artists" => "nullable",
-            "writers" => "nullable|array"
+            "writers" => "nullable|string"
         ]);
         $newComic->fill($data);
 

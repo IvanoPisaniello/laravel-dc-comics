@@ -10,51 +10,82 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="container py-5">
+           
             <form action="{{ route('comics.store')}}" method="POST">
                 @csrf()
-    
+      
                 <div class="mb-3">
                     <label class="form-labal">Titolo</label>
-                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control" @error('title') is-invalid @enderror name="title">
+                    @error('title')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Descrizione</label>
-                    <textarea class="form-control" name="description"></textarea>
+                    <textarea class="form-control" @error('description') is-invalid @enderror name="description"></textarea>
+                    @error('description')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Link immagine</label>
-                    <input type="text" class="form-control" name="thumb">
+                    <input type="text" class="form-control" @error('thumb') is-invalid @enderror name="thumb">
+                    @error('thumb')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Prezzo</label>
-                    <input type="number" class="form-control" name="price">
+                    <input type="number" class="form-control" @error('price') is-invalid @enderror name="price">
+                    @error('price')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Serie</label>
-                    <input type="text" class="form-control" name="series">
+                    <input type="text" class="form-control" @error('series') is-invalid @enderror name="series">
+                    @error('series')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Data di uscita</label>
-                    <input type="date" class="form-control" name="sale_date">
+                    <input type="date" class="form-control" @error('sale_date') is-invalid @enderror name="sale_date">
+                    @error('sales_date')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Tipo</label>
-                    <input type="text" class="form-control" name="type">
+                    <input type="text" class="form-control" @error('type') is-invalid @enderror name="type">
+                    @error('type')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Disegnatori</label>
-                    <input type="text" class="form-control" name="artists">
+                    <input type="text" class="form-control" @error('artists') is-invalid @enderror name="artists">
+                    @error('artists')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Scrittori</label>
-                    <input type="text" class="form-control" name="writers">
+                    <input type="text" class="form-control" @error('writers') is-invalid @enderror name="writers">
+                    @error('writers')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
-    
+
                 <button type="submit" class="btn btn-primary">Salva</button>
                 <a class="btn btn-primary" href="{{ route('comics.index') }}">Indietro</a>
             </form>
+           
         </div>
+        
     </div>
 </body>
 </html>
