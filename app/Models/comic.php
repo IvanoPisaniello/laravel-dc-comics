@@ -9,10 +9,9 @@ class comic extends Model
 {
     use HasFactory;
 
-
     protected $casts = [
-        // 'artists' => 'array',
-        "writers" => "string"
+        'artists' => 'array',
+        'writers' => 'array'
     ];
 
     protected $fillable = [

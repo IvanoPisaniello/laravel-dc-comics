@@ -63,9 +63,11 @@ class ComicController extends Controller
             "series" => "nullable|string|max:255",
             "sales_date" => "nullable",
             "type" => "nullable",
-            "artists" => "nullable|string",
-            "writers" => "nullable|string"
+            "artists" => "nullable",
+            "writers" => "nullable"
         ]);
+        // $data["writers"] = explode(",", $data["writers"]);
+        // $data["artists"] = explode(",", $data["artists"]);
         $newComic->fill($data);
 
         $newComic->save();
