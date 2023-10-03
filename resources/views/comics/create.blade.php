@@ -18,63 +18,63 @@
       
                 <div class="mb-3">
                     <label class="form-labal">Titolo</label>
-                    <input type="text" class="form-control" @error('title') is-invalid @enderror name="title">
+                    <input type="text" class="form-control" @error('title') is-invalid @enderror name="title" value="{{old('title')}}">
                     @error('title')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Descrizione</label>
-                    <textarea class="form-control" @error('description') is-invalid @enderror name="description"></textarea>
+                    <textarea class="form-control" @error('description') is-invalid @enderror name="description" value="{{old('description')}}"></textarea>
                     @error('description')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Link immagine</label>
-                    <input type="text" class="form-control" @error('thumb') is-invalid @enderror name="thumb">
+                    <input type="text" class="form-control" @error('thumb') is-invalid @enderror name="thumb" value="{{old('thumb')}}">
                     @error('thumb')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Prezzo</label>
-                    <input type="number" class="form-control" @error('price') is-invalid @enderror name="price">
+                    <input type="number" class="form-control" @error('price') is-invalid @enderror name="price" value="{{old('price')}}">
                     @error('price')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Serie</label>
-                    <input type="text" class="form-control" @error('series') is-invalid @enderror name="series">
+                    <input type="text" class="form-control" @error('series') is-invalid @enderror name="series" value="{{old('series')}}">
                     @error('series')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Data di uscita</label>
-                    <input type="date" class="form-control" @error('sale_date') is-invalid @enderror name="sale_date">
+                    <input type="date" class="form-control" @error('sale_date') is-invalid @enderror name="sale_date" value="{{old('sale_date')}}">
                     @error('sales_date')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Tipo</label>
-                    <input type="text" class="form-control" @error('type') is-invalid @enderror name="type">
+                    <input type="text" class="form-control" @error('type') is-invalid @enderror name="type" value="{{old('type')}}">
                     @error('type')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Disegnatori</label>
-                    <input type="text" class="form-control" @error('artists') is-invalid @enderror name="artists">
+                    <input type="text" class="form-control" @error('artists') is-invalid @enderror name="artists" value="{{old('artists')}}">
                     @error('artists')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label class="form-labal">Scrittori</label>
-                    <input type="text" class="form-control" @error('writers') is-invalid @enderror name="writers">
+                    <input type="text" class="form-control" @error('writers') is-invalid @enderror name="writers" value="{{old('writers')}}">
                     @error('writers')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror
