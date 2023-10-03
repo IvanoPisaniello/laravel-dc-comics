@@ -9,10 +9,19 @@ class comic extends Model
 {
     use HasFactory;
 
-    protected $casts = [
-        'artists' => 'array',
-        'writers' => 'array'
-    ];
+    // protected $casts = [
+    //     'artists' => 'array',
+    //     'writers' => 'array'
+    // ];
+
+    public function setArtistsAttribute($value)
+    {
+        $this->attributes['artists'] = json_encode($value);
+    }
+    public function setWritersAttribute($value)
+    {
+        $this->attributes['writers'] = json_encode($value);
+    }
 
     protected $fillable = [
         "title",

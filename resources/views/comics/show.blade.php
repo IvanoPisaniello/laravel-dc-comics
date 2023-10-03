@@ -40,12 +40,12 @@
                 
                 <div class="d-flex justify-content-between border-bottom p-3">
                     <p class="me-5">Art by:</p>
-                    <p class="text-primary">{{ str_replace(['[', ']', '"'], '', $comic->artists) }}</p>
+                    <p class="text-primary">{{$comic->artists }}</p>
                 </div>
                 
                 <div class="d-flex justify-content-between p-3">
                     <p class="me-5">Written by:</p>
-                    <p class="text-primary">{{ str_replace(['[', ']', '"'], '', $comic->writers) }}</p>
+                    <p class="text-primary">{{$comic->writers }}</p>
                 </div>
                 
                 
