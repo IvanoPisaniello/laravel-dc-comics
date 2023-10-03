@@ -16,11 +16,16 @@
     @include ('partials.header')
     @include ('partials.hero')
     <div class="show-container">
-        <div class="blue-bar bg-primary p-2">
+        <div class="blue-bar bg-primary p-2 d-flex justify-content-between">
             <a class="btn btn-success rounded-2" href="{{ route('comics.index') }}">Torna a Tutti i Comics</a>
+            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="d-inline-block">
+                @csrf
+                @method("DELETE")
+                <button type="submit" class="btn btn-danger">Elimina</button>
+              </form>
         </div>
         <div class="container">
-          
+                  
          <img src="{{$comic->thumb}}" alt="" class="img-show">
          <div class="info-container">
             <h3 class="mt-5">{{$comic->title}}</h3>

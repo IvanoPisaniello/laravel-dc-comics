@@ -87,4 +87,12 @@ class ComicController extends Controller
         $comic = Comic::find($id);
         return view('comics.show', ["comic" => $comic]);
     }
+
+
+    public function destroy($id)
+    {
+        $comics = Comic::FindOrFail($id);
+        $comics->delete();
+        return redirect()->route('comics.index');
+    }
 }

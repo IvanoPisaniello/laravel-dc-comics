@@ -30,3 +30,5 @@ Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.sh
 
 route::get("/comics/{id}/edit", [ComicController::class, "edit"])->name("comics.edit");
 route::put("/comics/{id}", [ComicController::class, "update"])->name("comics.update");
+
+route::delete("/comics/{id}", [ComicController::class, "destroy"])->name("comics.destroy");
